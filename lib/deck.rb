@@ -1,5 +1,7 @@
 
 class Deck
+include Enumerable
+
   attr_reader :cards
 
   def initialize(cards)
