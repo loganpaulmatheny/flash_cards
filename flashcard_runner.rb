@@ -48,6 +48,18 @@ def start
     
   end  
 
+  categories = round.deck.cards.map {|card| card.category}.uniq
+  puts "****** Game Over! ******"
+  puts "You had #{round.number_correct} correct guesses out of #{round.deck.count} for a total score of #{round.percent_correct.round(2)}."
+  
+  for category in categories do 
+    puts "#{category} - #{round.percent_correct_by_category(category).round(2)}% correct"
+  end 
+  
+  # loop through the categories present in the deck 
+
+
+
 end 
 
 start
